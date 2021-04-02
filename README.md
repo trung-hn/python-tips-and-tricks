@@ -23,8 +23,8 @@ for i, val in enumerate(["A", 7, {1, 2}]):
     print(i, val)
 
 # Output
-# 0 String
-# 1 10
+# 0 A
+# 1 7
 # 2 {1, 2}
 ```
 
@@ -35,8 +35,8 @@ for i, val in enumerate(["A", 7, {1, 2}], 100):
     print(i, val)
 
 # Output
-# 100 String
-# 101 10
+# 100 A
+# 101 7
 # 102 {1, 2}
 ```
 
