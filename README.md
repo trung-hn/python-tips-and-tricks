@@ -16,7 +16,7 @@ This is a Work in Progress
 
 ### Python Unpacking
 
-Unpack values quickly from a tuple or a list
+Unpack values quickly from a tuple or a list:
 
 ```python
 first, second, last = [10, 20, 30]
@@ -101,7 +101,7 @@ print(nums)
 # [10, 11, 20, 22, 30, 33, 40, 44]
 ```
 
-2 **NESTED** `for` loops
+2 **NESTED** `for` loops:
 
 ```python
 
@@ -163,7 +163,7 @@ print(first, mid, last)
 # 1 [2, 3, 4, 5] 6
 ```
 
-Because `*` is greedy (matches as much as it can), you cannot use two `*` in the one unpack
+Because `*` is greedy (matches as much as it can), you cannot use two `*` in one unpack
 
 ```python
 first, *mid, *rest = [1, 2, 30, 40, 50, 60]
@@ -174,6 +174,27 @@ print(first, mid, rest)
 ```
 
 ### Conditional Comprehensions
+
+`if` statement in List Comprehension
+
+``` python
+nums = [i for i in range(10) if i % 2]
+print(nums)
+
+# Output:
+# [1, 3, 5, 7, 9]
+```
+
+`if else` statement in List Comprehension. Notice that `if else` is placed in the **front**.
+
+``` python
+nums = [i if i % 2 else 0 for i in range(10)]
+print(nums)
+
+# Output:
+# [0, 1, 0, 3, 0, 5, 0, 7, 0, 9]
+```
+
 
 
 
