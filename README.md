@@ -93,7 +93,7 @@ for i, val in enumerate(["A", "B", "C"]):  # <--- this has python unpacking
 # 2 C
 ```
 
-`enumerate()` accepts an **optional argument** where you can specify **starting index** of `idx`
+`enumerate()` accepts an **optional argument** where you can specify **starting index** of `i`:
 
 ```python
 for i, val in enumerate(["A", 7, {1, 2}], 100):
@@ -117,7 +117,7 @@ print(nums)
 # [1,2,3,4]
 ```
 
-2 `for` loops:
+2 `for` loops. 
 
 ```python
 nums = [i * j for i in range(1, 5) for j in range(10, 12)]
@@ -125,18 +125,38 @@ print(nums)
 
 # Output:
 # [10, 11, 20, 22, 30, 33, 40, 44]
+
+# Equivalent to:
+# nums = []
+# for i in range(1, 5):
+#     for j in range(10, 12):
+#         nums.append(i * j)
+# print(matrix)
 ```
+
+In the example above, please notice that `for i` is the outer loop and `for j` is the inner loop
 
 2 **NESTED** `for` loops:
 
 ```python
-
-matrix = [[i * j for i in range(1, 5)] for j in range(10, 12)]
+matrix = [[i * j for j in range(10, 12)] for i in range(1, 5)]
 print(matrix)
 
 # Output:
-# [[10, 20, 30, 40], [11, 22, 33, 44]]
+# [[10, 11], [20, 22], [30, 33], [40, 44]]
+
+# Equivalent to:
+# matrix = []
+# for i in range(1, 5):
+#     row = []
+#     for j in range(10, 12):
+#         row.append(i * j)
+#     matrix.append(row)
+# print(matrix)
 ```
+
+In this example above, please pay attention to the order of `for i` and `for j`. Although `for i` is the outer loop, it appears after `for j` in the list comprehension
+
 
 Example use cases:
 
