@@ -4,8 +4,8 @@ This is a Work in Progress
 
 - [Table of Contents](#table-of-contents)
   - [Basic Tips and Tricks](#basic-tips-and-tricks)
-    - [Enumerate()](#enumerate)
     - [Python Unpacking](#python-unpacking)
+    - [Enumerate()](#enumerate)
     - [List Comprehension](#list-comprehension)
     - [Dictionary and Set Comprehension](#dictionary-and-set-comprehension)
   - [Advance Tips and Tricks](#advance-tips-and-tricks)
@@ -13,6 +13,45 @@ This is a Work in Progress
     - [Conditional Comprehensions](#conditional-comprehensions)
 
 ## Basic Tips and Tricks
+
+### Python Unpacking
+
+Unpack values quickly from a tuple or a list
+
+```python
+first, second, last = [10, 20, 30]
+print(first, second, last)
+
+# Output
+# 10 20 30
+```
+
+Nested Unpacking:
+
+```python
+matrix = [[1, 2], [10, 20]]
+(one, two), (three, four) = matrix
+print(one, two, three, four)
+
+# Output:
+# 1 2 10 20
+```
+
+Nested Unpacking inside loop:
+
+```python
+matrix = [[1, 2], [3, 4], [5, 6]]
+for val1, val2 in matrix:
+    print(val1, val2)
+
+# Output:
+# 1 2
+# 3 4
+# 5 6
+```
+
+<!-- Add example how to unpack values from function -->
+More: [Python Unpacking with `*`](#python-unpacking-with-)
 
 ### Enumerate()
 
@@ -39,20 +78,6 @@ for i, val in enumerate(["A", 7, {1, 2}], 100):
 # 101 7
 # 102 {1, 2}
 ```
-
-### Python Unpacking
-
-You can unpack value quickly from a tuple or a list as follows
-
-```python
-first, second, last = [10, 20, 30]
-print(first, second, last)
-
-# Output
-# 10 20 30
-```
-<!-- Add example how to unpack values from function -->
-More: [Python Unpacking with `*`](#python-unpacking-with-)
 
 ### List Comprehension
 
