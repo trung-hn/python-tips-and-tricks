@@ -2,9 +2,13 @@ This is a Work in Progress
 
 ## What is this ?
 
-Initially, I created this list to show my friends how cool Python is. Now, this list contains Python Tips and Tricks I learned and collected from years of solving [Leetcode](https://leetcode.com/JummyEgg/) problems. The purpose of this list is to show you best practices in writing Pythonic code. Please enjoy.
+Initially, I created this list to show my friends how cool Python is. Now, this list contains Python Tips and Tricks I learned and collected from years of solving [Leetcode](https://leetcode.com/JummyEgg/) problems. The purpose of this list is to show you the best practices in writing Pythonic code.
 
 This uses `python >= 3.6` unless specified.
+
+How should you read this list: I separate the list into topics. Topics appear later down in the list require understandings of topics appear earlier. Thus, it's best for you to read this list from top to bottom. At the end of some topics, I have link to examples or link to more advanced topics. You can follow the links or simply ignore those for now (because you will see them later on).
+
+Please enjoy.
 
 ## Table of Contents
 
@@ -39,8 +43,6 @@ print(a, b, c)
 # 30 10 20
 ```
 
-More: [Multiple Statements on 1 line](#multiple-statements-on-1-line)
-
 ### Python Unpacking
 
 Unpack values from a tuple or a list:
@@ -56,12 +58,12 @@ print(first, second, last)
 Nested Unpacking:
 
 ```python
-matrix = [[1, 2], [10, 20]]
+matrix = [[1, 2], ["A", "B"]]
 (one, two), (three, four) = matrix
 print(one, two, three, four)
 
 # Output:
-# 1 2 10 20
+# 1 2 A B
 ```
 
 Nested Unpacking inside loop:
