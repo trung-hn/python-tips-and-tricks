@@ -1,3 +1,5 @@
+This is Work in Progress:
+
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -73,6 +75,16 @@ Example use cases:
 - [Matrix Initialization](./examples/list_comprehension/matrix_initilization.py)
 
 ### Dictionary Comprehension
+
+Dictionary also has comprehension.
+
+```python
+my_dict = {val : i for i, val in enumerate([10, 20, 30])}
+print(my_dict)
+
+# Output
+# {10: 0, 20: 1, 30: 2}
+```
 
 ## Advance Tips and Tricks
 
