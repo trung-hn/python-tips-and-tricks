@@ -4,19 +4,36 @@ This is a Work in Progress
 
 - [Table of Contents](#table-of-contents)
   - [Basic Tips and Tricks](#basic-tips-and-tricks)
+    - [Swap 2 variables](#swap-2-variables)
     - [Python Unpacking](#python-unpacking)
     - [Enumerate()](#enumerate)
     - [List Comprehension](#list-comprehension)
     - [Dictionary and Set Comprehension](#dictionary-and-set-comprehension)
+    - [Multiple Statements on 1 line](#multiple-statements-on-1-line)
   - [Extended Tips and Tricks](#extended-tips-and-tricks)
     - [Python Unpacking with `*`](#python-unpacking-with-)
     - [Conditional Comprehensions](#conditional-comprehensions)
 
 ## Basic Tips and Tricks
 
+### Swap 2 variables
+
+In some other languages, when we want to swap 2 variables, we tend to use `temp` to store the value. However, in Python, there is a cleaner way to do this:
+
+```python
+a = 10
+b = 20
+c = 30
+a, b, c = c, a, b
+print(a, b, c)
+# 30 10 20
+```
+
+More: [Multiple Statements on 1 line](#multiple-statements-on-1-line)
+
 ### Python Unpacking
 
-Unpack values quickly from a tuple or a list:
+Unpack values from a tuple or a list:
 
 ```python
 first, second, last = [10, 20, 30]
@@ -141,6 +158,25 @@ print(my_set)
 
 You might ask why bother with Set Comprehension when we could do this: `print(set(nums))`. The answer is because of [Conditional Comprehensions](#conditional-comprehensions)
 
+### Multiple Statements on 1 line
+
+Although in Python, we don't use `;` often, it can help with writing multiple lines of code on one line like this:
+
+```python
+a = 3; b = 10; c = "--"
+for i in range(a): print(i * b); print(c)
+
+# Output:
+# 0
+# --
+# 10
+# --
+# 20
+# --
+```
+
+However, as you can imagine, this can be hard to read if you overuse it. So please use it with care. I tend to only use it for variable initilization.
+
 ## Extended Tips and Tricks
 
 ### Python Unpacking with `*`
@@ -196,32 +232,31 @@ print(nums)
 # [0, 1, 0, 3, 0, 5, 0, 7, 0, 9]
 ```
 
-
-
-
-
-
-
-
 To Add: 
 - *args, **kwargs
 - one-line if
+- for else
+- while else
 - unpack and iterate at the same time
 - collections
   - defaultdict
   - queue
-  - Counter
+  - Counter, | &
 - itertools
   - chain
   - zip longest
 - functools
+  - lambda
   - map
   - filter
+  - reduce
+- class
+- Generator
+- Iterator
 - pprint
-- set
-- list
-- dictionary
+- cache()
 - decorator
 - access variable outside of function
+- https://github.com/chiphuyen/python-is-cool
 - https://book.pythontips.com/en/latest/enumerate.html
 - https://github.com/alexghergh/python-tricks
