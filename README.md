@@ -22,6 +22,19 @@ Please enjoy.
   - [List Comprehension](#list-comprehension)
   - [Dictionary and Set Comprehension](#dictionary-and-set-comprehension)
   - [Multiple Statements on 1 line](#multiple-statements-on-1-line)
+- [Built-in Libraries](#built-in-libraries)
+  - [collections](#collections)
+    - [defaultdict](#defaultdict)
+    - [Counter](#counter)
+    - [Queue](#queue)
+  - [functools](#functools)
+  - [itertools](#itertools)
+    - [chain](#chain)
+    - [zip_longest](#zip_longest)
+  - [string](#string)
+  - [random](#random)
+  - [heapq](#heapq)
+  - [bisect](#bisect)
 - [Extended Tips and Tricks](#extended-tips-and-tricks)
   - [Python Unpacking with `*`](#python-unpacking-with-)
   - [Conditional Comprehensions](#conditional-comprehensions)
@@ -123,7 +136,7 @@ print(my_list)
 # [0, 0, 0, 0, 0]
 ```
 
-However, please never do as follows:
+However, please **NEVER** do as follows:
 
 ```python
 my_list = [[0] * 5] * 2   # <--- DO NOT DO THIS. This is shallow copy
@@ -132,7 +145,7 @@ print(my_list)
 # Output:
 # [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]
 
-my_list[0][0] = 5    # <--- Both inner Array will change
+my_list[0][0] = 5    # <--- All inner arrays will change
 print(my_list)
 
 # Output:
@@ -242,6 +255,32 @@ for i in range(a): print(i * b); print(c)
 
 However, as you can imagine, this can be hard to read if you overuse it. So please use it with care. I tend to only use it for variable initilization.
 
+## Built-in Libraries
+
+### collections
+
+#### defaultdict
+
+#### Counter
+
+#### Queue
+
+### functools
+
+### itertools
+
+#### chain
+
+#### zip_longest
+
+### string
+
+### random
+
+### heapq
+
+### bisect
+
 ## Extended Tips and Tricks
 
 ### Python Unpacking with `*`
@@ -298,18 +337,16 @@ print(nums)
 ```
 
 To Add: 
-- *args, **kwargs
+- lambda
+  - key sort
+  - key min, max
+- zip
 - one-line if
 - for else
 - while else
 - unpack and iterate at the same time
-- collections
-  - defaultdict
-  - queue
+- *args, **kwargs
   - Counter, | &
-- itertools
-  - chain
-  - zip longest
 - functools
   - lambda
   - map
