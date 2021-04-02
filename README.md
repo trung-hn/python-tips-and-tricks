@@ -117,17 +117,36 @@ print(my_set)
 
 You might ask why bother with Set Comprehension when we could do this: `print(set(nums))`. The answer is because of [Conditional Comprehensions](#conditional-comprehensions)
 
-
 ## Advance Tips and Tricks
 
 ### Python Unpacking with `*`
 
-While unpacking, you can use `*` to greedy match as much as it can
+While unpacking, you can use `*` to greedy match as much as it can and return a **list**
 
 ```python
+first, second, *rest = [1, 2, 3, 4, 5, 6]
+print(first, second, rest)
 
+# Output
+# 1 2 [3, 4, 5, 6]
+
+
+first, *mid, last = [1, 2, 3, 4, 5, 6]
+print(first, mid, last)
+
+# Output
+# 1 [2, 3, 4, 5] 6
 ```
 
+Because `*` is greedy (matches as much as it can), you cannot use two `*` in the one unpack
+
+```python
+first, *mid, *rest = [1, 2, 30, 40, 50, 60]
+print(first, mid, rest)
+
+# Output
+# SyntaxError: two starred expressions in assignment
+```
 
 ### Conditional Comprehensions
 
