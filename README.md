@@ -6,8 +6,9 @@ This is a Work in Progress
   - [Basic Tips and Tricks](#basic-tips-and-tricks)
     - [Enumerate()](#enumerate)
     - [List Comprehension](#list-comprehension)
-    - [Dictionary Comprehension](#dictionary-comprehension)
+    - [Dictionary and Set Comprehension](#dictionary-and-set-comprehension)
   - [Advance Tips and Tricks](#advance-tips-and-tricks)
+    - [Conditional Comprehensions](#conditional-comprehensions)
 
 ## Basic Tips and Tricks
 
@@ -74,7 +75,7 @@ Example use cases:
 
 - [Matrix Initialization](./examples/list_comprehension/matrix_initilization.py)
 
-### Dictionary Comprehension
+### Dictionary and Set Comprehension
 
 Dictionary also has comprehension.
 
@@ -86,7 +87,24 @@ print(my_dict)
 # {10: 0, 20: 1, 30: 2}
 ```
 
+Set also has comprehension
+
+```python
+nums = [1,1,1,2,2,3,3,4]
+my_set = {num for num in nums}
+print(my_set)
+
+# Output
+# {1, 2, 3, 4}
+```
+
+You might ask why bother with Set Comprehension when we could do this: `print(set(nums))`. The answer is because of [Conditional Comprehensions](#conditional-comprehensions)
+
+
 ## Advance Tips and Tricks
+
+### Conditional Comprehensions
+
 
 To Add: 
 - one-line if
