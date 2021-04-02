@@ -1,18 +1,25 @@
 This is a Work in Progress
 
-# Table of Contents
+## What is this ?
 
+Initially, I created this list to show my friends how cool Python is. Now, this list contains Python Tips and Tricks I learned and collected from years of solving Leetcode problems. The purpose of this list is to show you best practices in writing Pythonic code. Please enjoy.
+
+This uses `python >= 3.6` unless specified.
+
+## Table of Contents
+
+- [What is this ?](#what-is-this-)
 - [Table of Contents](#table-of-contents)
-  - [Basic Tips and Tricks](#basic-tips-and-tricks)
-    - [Swap 2 variables](#swap-2-variables)
-    - [Python Unpacking](#python-unpacking)
-    - [Enumerate()](#enumerate)
-    - [List Comprehension](#list-comprehension)
-    - [Dictionary and Set Comprehension](#dictionary-and-set-comprehension)
-    - [Multiple Statements on 1 line](#multiple-statements-on-1-line)
-  - [Extended Tips and Tricks](#extended-tips-and-tricks)
-    - [Python Unpacking with `*`](#python-unpacking-with-)
-    - [Conditional Comprehensions](#conditional-comprehensions)
+- [Basic Tips and Tricks](#basic-tips-and-tricks)
+  - [Swap 2 variables](#swap-2-variables)
+  - [Python Unpacking](#python-unpacking)
+  - [Enumerate()](#enumerate)
+  - [List Comprehension](#list-comprehension)
+  - [Dictionary and Set Comprehension](#dictionary-and-set-comprehension)
+  - [Multiple Statements on 1 line](#multiple-statements-on-1-line)
+- [Extended Tips and Tricks](#extended-tips-and-tricks)
+  - [Python Unpacking with `*`](#python-unpacking-with-)
+  - [Conditional Comprehensions](#conditional-comprehensions)
 
 ## Basic Tips and Tricks
 
