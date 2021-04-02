@@ -2,7 +2,7 @@ This is a Work in Progress
 
 ## What is this ?
 
-Initially, I created this list to show my friends how cool Python is. Now, this list contains Python Tips and Tricks I learned and collected from years of solving Leetcode problems. The purpose of this list is to show you best practices in writing Pythonic code. Please enjoy.
+Initially, I created this list to show my friends how cool Python is. Now, this list contains Python Tips and Tricks I learned and collected from years of solving [Leetcode](https://leetcode.com/JummyEgg/) problems. The purpose of this list is to show you best practices in writing Pythonic code. Please enjoy.
 
 This uses `python >= 3.6` unless specified.
 
@@ -31,7 +31,7 @@ In some other languages, when we want to swap 2 variables, we tend to use `temp`
 a = 10
 b = 20
 c = 30
-a, b, c = c, a, b
+a, b, c = c, a, b    # <--- all three assignments are done at the same time
 print(a, b, c)
 # 30 10 20
 ```
@@ -79,16 +79,16 @@ More: [Python Unpacking with `*`](#python-unpacking-with-)
 
 ### Enumerate()
 
-`enumerate()` can be used to iterate over **index and value** at the same time.
+When writing Python, the clean way to iterate over **index and value** at the same time is to use `enumerate()` like this:
 
 ```python
-for i, val in enumerate(["A", 7, {1, 2}]):
+for i, val in enumerate(["A", "B", "C"]): # <--- this is python unpacking
     print(i, val)
 
 # Output
 # 0 A
-# 1 7
-# 2 {1, 2}
+# 1 B
+# 2 C
 ```
 
 `enumerate()` accepts an **optional argument** where you can specify **starting index** of `idx`
@@ -167,7 +167,7 @@ You might ask why bother with Set Comprehension when we could do this: `print(se
 
 ### Multiple Statements on 1 line
 
-Although in Python, we don't use `;` often, it can help with writing multiple lines of code on one line like this:
+Although in Python, we don't use `;` often, it can help with writing multiple lines of code on the same line like this:
 
 ```python
 a = 3; b = 10; c = "--"
