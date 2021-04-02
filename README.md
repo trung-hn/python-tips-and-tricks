@@ -1,4 +1,4 @@
-This is Work in Progress:
+This is a Work in Progress
 
 # Table of Contents
 
@@ -13,7 +13,7 @@ This is Work in Progress:
 
 ### Enumerate()
 
-`enumerate()` can be used to iterate over index and value at the same time.
+`enumerate()` can be used to iterate over **index and value** at the same time.
 
 ```python
 for i, val in enumerate(["A", 7, {1, 2}]):
@@ -25,7 +25,7 @@ for i, val in enumerate(["A", 7, {1, 2}]):
 # 2 {1, 2}
 ```
 
-`enumerate()` accepts an optional argument where you can specify starting index of `idx`
+`enumerate()` accepts an **optional argument** where you can specify **starting index** of `idx`
 
 ```python
 for i, val in enumerate(["A", 7, {1, 2}], 100):
@@ -39,7 +39,7 @@ for i, val in enumerate(["A", 7, {1, 2}], 100):
 
 ### List Comprehension
 
-Cleaner and faster way to do `for` loop
+**Cleaner and faster** way to do `for` loop
 
 ```python
 nums = [i for i in range(1, 5)]
