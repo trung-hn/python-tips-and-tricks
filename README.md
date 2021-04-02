@@ -33,6 +33,8 @@ b = 20
 c = 30
 a, b, c = c, a, b    # <--- all three assignments are done at the same time
 print(a, b, c)
+
+# Output:
 # 30 10 20
 ```
 
@@ -46,7 +48,7 @@ Unpack values from a tuple or a list:
 first, second, last = [10, 20, 30]
 print(first, second, last)
 
-# Output
+# Output:
 # 10 20 30
 ```
 
@@ -82,10 +84,10 @@ More: [Python Unpacking with `*`](#python-unpacking-with-)
 When writing Python, the clean way to iterate over **index and value** at the same time is to use `enumerate()` like this:
 
 ```python
-for i, val in enumerate(["A", "B", "C"]): # <--- this is python unpacking
+for i, val in enumerate(["A", "B", "C"]):  # <--- this has python unpacking
     print(i, val)
 
-# Output
+# Output:
 # 0 A
 # 1 B
 # 2 C
@@ -97,7 +99,7 @@ for i, val in enumerate(["A", "B", "C"]): # <--- this is python unpacking
 for i, val in enumerate(["A", 7, {1, 2}], 100):
     print(i, val)
 
-# Output
+# Output:
 # 100 A
 # 101 7
 # 102 {1, 2}
@@ -111,7 +113,7 @@ for i, val in enumerate(["A", 7, {1, 2}], 100):
 nums = [i for i in range(1, 5)]
 print(nums)
 
-# Output
+# Output:
 # [1,2,3,4]
 ```
 
@@ -121,7 +123,7 @@ print(nums)
 nums = [i * j for i in range(1, 5) for j in range(10, 12)]
 print(nums)
 
-# Output
+# Output:
 # [10, 11, 20, 22, 30, 33, 40, 44]
 ```
 
@@ -132,7 +134,7 @@ print(nums)
 matrix = [[i * j for i in range(1, 5)] for j in range(10, 12)]
 print(matrix)
 
-# Output
+# Output:
 # [[10, 20, 30, 40], [11, 22, 33, 44]]
 ```
 
@@ -148,7 +150,7 @@ Dictionary also has comprehension:
 my_dict = {val : i for i, val in enumerate([10, 20, 30])}
 print(my_dict)
 
-# Output
+# Output:
 # {10: 0, 20: 1, 30: 2}
 ```
 
@@ -159,7 +161,7 @@ nums = [1,1,1,2,2,3,3,4]
 my_set = {num for num in nums}
 print(my_set)
 
-# Output
+# Output:
 # {1, 2, 3, 4}
 ```
 
@@ -194,14 +196,14 @@ While unpacking, you can use `*` to greedy match as much as it can and return a 
 first, second, *rest = [1, 2, 3, 4, 5, 6]
 print(first, second, rest)
 
-# Output
+# Output:
 # 1 2 [3, 4, 5, 6]
 # Notice that rest is a list
 
 first, *mid, last = [1, 2, 3, 4, 5, 6]
 print(first, mid, last)
 
-# Output
+# Output:
 # 1 [2, 3, 4, 5] 6
 ```
 
