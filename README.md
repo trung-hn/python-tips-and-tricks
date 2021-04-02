@@ -8,7 +8,7 @@ This is a Work in Progress
     - [Enumerate()](#enumerate)
     - [List Comprehension](#list-comprehension)
     - [Dictionary and Set Comprehension](#dictionary-and-set-comprehension)
-  - [Advance Tips and Tricks](#advance-tips-and-tricks)
+  - [Extended Tips and Tricks](#extended-tips-and-tricks)
     - [Python Unpacking with `*`](#python-unpacking-with-)
     - [Conditional Comprehensions](#conditional-comprehensions)
 
@@ -81,7 +81,7 @@ for i, val in enumerate(["A", 7, {1, 2}], 100):
 
 ### List Comprehension
 
-**Cleaner and faster** way to do `for` loop
+**Cleaner and faster** way to do `for` loop:
 
 ```python
 nums = [i for i in range(1, 5)]
@@ -118,8 +118,7 @@ Example use cases:
 
 ### Dictionary and Set Comprehension
 
-
-Dictionary also has comprehension.
+Dictionary also has comprehension:
 
 ```python
 my_dict = {val : i for i, val in enumerate([10, 20, 30])}
@@ -129,7 +128,7 @@ print(my_dict)
 # {10: 0, 20: 1, 30: 2}
 ```
 
-Set also has comprehension
+Set also has comprehension:
 
 ```python
 nums = [1,1,1,2,2,3,3,4]
@@ -142,7 +141,7 @@ print(my_set)
 
 You might ask why bother with Set Comprehension when we could do this: `print(set(nums))`. The answer is because of [Conditional Comprehensions](#conditional-comprehensions)
 
-## Advance Tips and Tricks
+## Extended Tips and Tricks
 
 ### Python Unpacking with `*`
 
@@ -154,7 +153,7 @@ print(first, second, rest)
 
 # Output
 # 1 2 [3, 4, 5, 6]
-
+# Notice that rest is a list
 
 first, *mid, last = [1, 2, 3, 4, 5, 6]
 print(first, mid, last)
@@ -175,7 +174,9 @@ print(first, mid, rest)
 
 ### Conditional Comprehensions
 
-`if` statement in List Comprehension
+Conditional Comprehensions allow us to add `if else` statement into list/set/dict comprehensions.
+
+`if` statement in List Comprehension:
 
 ``` python
 nums = [i for i in range(10) if i % 2]
