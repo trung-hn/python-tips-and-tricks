@@ -42,7 +42,7 @@ for i, val in enumerate(["A", 7, {1, 2}], 100):
 
 ### Python Unpacking
 
-You can unpack value quickly from a tuple of list as follows
+You can unpack value quickly from a tuple or a list as follows
 
 ```python
 first, second, last = [10, 20, 30]
@@ -152,7 +152,12 @@ print(first, mid, rest)
 
 
 
+
+
+
+
 To Add: 
+- *args, **kwargs
 - one-line if
 - unpack and iterate at the same time
 - collections
