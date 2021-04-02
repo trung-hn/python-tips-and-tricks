@@ -14,6 +14,7 @@ This uses `python >= 3.6` unless specified.
   - [Swap 2 variables](#swap-2-variables)
   - [Python Unpacking](#python-unpacking)
   - [Enumerate()](#enumerate)
+  - [Quick Initilization](#quick-initilization)
   - [List Comprehension](#list-comprehension)
   - [Dictionary and Set Comprehension](#dictionary-and-set-comprehension)
   - [Multiple Statements on 1 line](#multiple-statements-on-1-line)
@@ -105,6 +106,39 @@ for i, val in enumerate(["A", 7, {1, 2}], 100):
 # 102 {1, 2}
 ```
 
+### Quick Initilization
+
+In Python, you can quickly create a string or a list like this:
+
+```python
+my_str = "a" * 5
+my_list = [0] * 5
+print(my_str)
+print(my_list)
+
+# Output:
+# aaaaa
+# [0, 0, 0, 0, 0]
+```
+
+However, please never do as follows:
+
+```python
+my_list = [[0] * 5] * 2   # <--- DO NOT DO THIS. This is shallow copy
+print(my_list)
+
+# Output:
+# [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]
+
+my_list[0][0] = 5    # <--- Both inner Array will change
+print(my_list)
+
+# Output:
+# [[1, 0, 0, 0, 0], [1, 0, 0, 0, 0]] 
+```
+
+To initialize a matrix, the best way is [here](examples/list_comprehension/matrix_initilization.py)
+
 ### List Comprehension
 
 **Cleaner and faster** way to do `for` loop:
@@ -120,7 +154,7 @@ print(nums)
 2 `for` loops. 
 
 ```python
-nums = [i * j for i in range(1, 5) for j in range(10, 12)]
+nums = [i * j for i in range(1, 5) for j in ["A", "B"]]
 print(nums)
 
 # Output:
