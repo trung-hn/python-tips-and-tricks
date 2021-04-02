@@ -5,9 +5,11 @@ This is a Work in Progress
 - [Table of Contents](#table-of-contents)
   - [Basic Tips and Tricks](#basic-tips-and-tricks)
     - [Enumerate()](#enumerate)
+    - [Python Unpacking](#python-unpacking)
     - [List Comprehension](#list-comprehension)
     - [Dictionary and Set Comprehension](#dictionary-and-set-comprehension)
   - [Advance Tips and Tricks](#advance-tips-and-tricks)
+    - [Python Unpacking with `*`](#python-unpacking-with-)
     - [Conditional Comprehensions](#conditional-comprehensions)
 
 ## Basic Tips and Tricks
@@ -37,6 +39,20 @@ for i, val in enumerate(["A", 7, {1, 2}], 100):
 # 101 10
 # 102 {1, 2}
 ```
+
+### Python Unpacking
+
+You can unpack value quickly from a tuple of list as follows
+
+```python
+first, second, last = [10, 20, 30]
+print(first, second, last)
+
+# Output
+# 10 20 30
+```
+<!-- Add example how to unpack values from function -->
+More: [Python Unpacking with `*`](#python-unpacking-with-)
 
 ### List Comprehension
 
@@ -77,6 +93,7 @@ Example use cases:
 
 ### Dictionary and Set Comprehension
 
+
 Dictionary also has comprehension.
 
 ```python
@@ -103,7 +120,17 @@ You might ask why bother with Set Comprehension when we could do this: `print(se
 
 ## Advance Tips and Tricks
 
+### Python Unpacking with `*`
+
+While unpacking, you can use `*` to greedy match as much as it can
+
+```python
+
+```
+
+
 ### Conditional Comprehensions
+
 
 
 To Add: 
