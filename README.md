@@ -2,15 +2,42 @@
 
 - [Table of Contents](#table-of-contents)
   - [Basic Tips and Tricks](#basic-tips-and-tricks)
+    - [Enumerate()](#enumerate)
     - [List Comprehension](#list-comprehension)
-    - [`Enumerate()`](#enumerate)
+    - [Dictionary Comprehension](#dictionary-comprehension)
   - [Advance Tips and Tricks](#advance-tips-and-tricks)
 
 ## Basic Tips and Tricks
 
+### Enumerate()
+
+`enumerate()` can be used to iterate over index and value at the same time.
+
+```python
+for i, val in enumerate(["A", 7, {1, 2}]):
+    print(i, val)
+
+# Output
+# 0 String
+# 1 10
+# 2 {1, 2}
+```
+
+`enumerate()` accepts an optional argument where you can specify starting index of `idx`
+
+```python
+for i, val in enumerate(["A", 7, {1, 2}], 100):
+    print(i, val)
+
+# Output
+# 100 String
+# 101 10
+# 102 {1, 2}
+```
+
 ### List Comprehension
 
-A cleaner and faster way to do `for` loop
+Cleaner and faster way to do `for` loop
 
 ```python
 nums = [i for i in range(1, 5)]
@@ -41,32 +68,11 @@ print(matrix)
 # [[10, 20, 30, 40], [11, 22, 33, 44]]
 ```
 
-### `Enumerate()`
+Example use cases:
 
-`enumerate()` can be used to iterate over index and value at the same time.
+- [Matrix Initialization](./examples/list_comprehension/matrix_initilization.py)
 
-```python
-for i, val in enumerate(["A", 7, {1, 2}]):
-    print(i, val)
-
-# Output
-# 0 String
-# 1 10
-# 2 {1, 2}
-```
-
-`enumerate()` accepts an optional argument where you can specify starting index of `idx`
-
-```python
-for i, val in enumerate(["A", 7, {1, 2}], 100):
-    print(i, val)
-
-# Output
-# 100 String
-# 101 10
-# 102 {1, 2}
-```
-
+### Dictionary Comprehension
 
 ## Advance Tips and Tricks
 
@@ -89,7 +95,5 @@ To Add:
 - dictionary
 - decorator
 - access variable outside of function
-
-
-https://book.pythontips.com/en/latest/enumerate.html
-Similar repo: https://github.com/alexghergh/python-tricks
+- https://book.pythontips.com/en/latest/enumerate.html
+- https://github.com/alexghergh/python-tricks
