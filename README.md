@@ -68,7 +68,7 @@ print(first, second, last)
 # 10 20 30
 ```
 
-Nested Unpacking:
+**Nested** Unpacking:
 
 ```python
 matrix = [[1, 2], ["A", "B"]]
@@ -79,7 +79,7 @@ print(one, two, three, four)
 # 1 2 A B
 ```
 
-Nested Unpacking inside loop:
+Unpacking inside loop:
 
 ```python
 matrix = [[1, 2], [3, 4], [5, 6]]
@@ -120,6 +120,10 @@ for i, val in enumerate(["A", 7, {1, 2}], 100):
 # 101 7
 # 102 {1, 2}
 ```
+
+Example:
+
+- [Leetcode 1779](examples/leetcode_problems/1779.py)
 
 ### Quick Initilization
 
@@ -185,7 +189,7 @@ print(nums)
 
 In the example above, please notice that `for i` is the outer loop and `for j` is the inner loop
 
-2 **NESTED** `for` loops:
+2 **Nested** `for` loops:
 
 ```python
 matrix = [[i * j for j in range(10, 12)] for i in range(1, 5)]
@@ -206,8 +210,7 @@ print(matrix)
 
 In this example above, please pay attention to the order of `for i` and `for j`. Although `for i` is the outer loop, it appears after `for j` in the list comprehension
 
-
-Example use cases:
+Examples:
 
 - [Matrix Initialization](./examples/list_comprehension/matrix_initilization.py)
 
@@ -345,6 +348,7 @@ To Add:
 - for else
 - while else
 - unpack and iterate at the same time
+- f-string
 - *args, **kwargs
   - Counter, | &
 - functools
