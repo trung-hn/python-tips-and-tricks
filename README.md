@@ -25,10 +25,17 @@ Please enjoy.
 - [Built-in Libraries](#built-in-libraries)
   - [collections](#collections)
     - [defaultdict](#defaultdict)
+    - [deque](#deque)
     - [Counter](#counter)
     - [Queue](#queue)
   - [functools](#functools)
+    - [reduce](#reduce)
+    - [cache](#cache)
   - [itertools](#itertools)
+    - [accumulate](#accumulate)
+    - [dropwhile](#dropwhile)
+    - [takewhile](#takewhile)
+    - [groupby](#groupby)
     - [chain](#chain)
     - [zip_longest](#zip_longest)
   - [string](#string)
@@ -79,7 +86,7 @@ print(one, two, three, four)
 # 1 2 A B
 ```
 
-Unpacking inside loop:
+Unpacking inside a loop:
 
 ```python
 matrix = [[1, 2], [3, 4], [5, 6]]
@@ -264,19 +271,68 @@ However, as you can imagine, this can be hard to read if you overuse it. So plea
 
 #### defaultdict
 
+#### deque
+
 #### Counter
 
 #### Queue
 
 ### functools
 
+#### reduce
+
+#### cache
+
 ### itertools
+
+#### accumulate
+
+#### dropwhile
+
+#### takewhile
+
+#### groupby
 
 #### chain
 
 #### zip_longest
 
 ### string
+
+When you need to get a list of characters quickly, you can get in from `string`
+
+All letters characters:
+
+```python
+print(string.ascii_lowercase)
+print(string.ascii_letters)
+
+# Output:
+# abcdefghijklmnopqrstuvwxyz
+# abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+```
+
+Or just digits:
+
+```python
+print(string.digits)
+print(string.hexdigits)
+
+# Output:
+# 0123456789
+# 0123456789abcdefABCDEF
+```
+
+Or just punctuation:
+
+```python
+print(string.punctuation)
+
+# Output:
+# !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+```
+
+[Example](examples/string_examples.py)
 
 ### random
 
@@ -322,7 +378,7 @@ Conditional Comprehensions allow us to add `if else` statement into list/set/dic
 `if` statement in List Comprehension:
 
 ``` python
-nums = [i for i in range(10) if i % 2]
+nums = [i for i in range(10) if i % 2]           # <--- if is placed at the end 
 print(nums)
 
 # Output:
@@ -332,7 +388,7 @@ print(nums)
 `if else` statement in List Comprehension. Notice that `if else` is placed in the **front**.
 
 ``` python
-nums = [i if i % 2 else 0 for i in range(10)]
+nums = [i if i % 2 else 0 for i in range(10)]    # <--- if else are placed in the front
 print(nums)
 
 # Output:
@@ -342,7 +398,7 @@ print(nums)
 To Add: 
 - lambda
   - key sort
-  - key min, max
+- key min, max
 - zip
 - one-line if
 - for else
@@ -350,7 +406,7 @@ To Add:
 - unpack and iterate at the same time
 - f-string
 - *args, **kwargs
-  - Counter, | &
+- Counter, | &
 - functools
   - lambda
   - map
@@ -360,7 +416,6 @@ To Add:
 - Generator
 - Iterator
 - pprint
-- cache()
 - decorator
 - access variable outside of function
 - https://github.com/chiphuyen/python-is-cool
