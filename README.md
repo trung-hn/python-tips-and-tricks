@@ -299,9 +299,7 @@ However, as you can imagine, this can be hard to read if you overuse it. So plea
 
 ### string
 
-When you need to get a list of characters quickly, you can get in from `string`
-
-All letters characters:
+When you need to get a list of characters quickly, you can get in from `string`. All letters:
 
 ```python
 print(string.ascii_lowercase)
