@@ -119,13 +119,13 @@ for i, val in enumerate(["A", "B", "C"]):  # <--- this has python unpacking
 `enumerate()` accepts an **optional argument** where you can specify **starting index** of `i`:
 
 ```python
-for i, val in enumerate(["A", 7, {1, 2}], 100):
+for i, val in enumerate(["Monday", "Tuesday", "Wednesday"], 2):
     print(i, val)
 
 # Output:
-# 100 A
-# 101 7
-# 102 {1, 2}
+# 2 Monday
+# 3 Tuesday
+# 4 Wednesday
 ```
 
 Example:
