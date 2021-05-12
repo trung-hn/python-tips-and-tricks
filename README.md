@@ -21,17 +21,15 @@ Please enjoy.
   - [Quick Initilization](#quick-initilization)
   - [List Comprehension](#list-comprehension)
   - [Dictionary and Set Comprehension](#dictionary-and-set-comprehension)
-  - [Lambda Function](#lambda-function)
+  - [`lambda` Function](#lambda-function)
   - [Key Functions](#key-functions)
+  - [`zip()`](#zip)
 - [Built-in Libraries](#built-in-libraries)
   - [collections](#collections)
     - [defaultdict](#defaultdict)
     - [deque](#deque)
     - [Counter](#counter)
     - [Queue](#queue)
-  - [functools](#functools)
-    - [reduce](#reduce)
-    - [cache](#cache)
   - [itertools](#itertools)
     - [accumulate](#accumulate)
     - [dropwhile](#dropwhile)
@@ -44,8 +42,12 @@ Please enjoy.
   - [heapq](#heapq)
   - [bisect](#bisect)
 - [Functional Programming](#functional-programming)
+  - [functools](#functools)
+    - [reduce](#reduce)
+    - [cache](#cache)
 - [Extended Tips and Tricks](#extended-tips-and-tricks)
   - [Python Unpacking with `*`](#python-unpacking-with-)
+  - [Iterate through matrix by column](#iterate-through-matrix-by-column)
   - [Conditional Comprehensions](#conditional-comprehensions)
   - [Multiple Statements on 1 line](#multiple-statements-on-1-line)
 
@@ -249,7 +251,7 @@ print(my_set)
 
 You might ask why bother with Set Comprehension when we could do this: `set(nums)`. The answer is because of [Conditional Comprehensions](#conditional-comprehensions)
 
-### Lambda Function
+### `lambda` Function
 
 `lambda` function or anonymous function is a different way to write function. The following 2 ways are equivalent:
 
@@ -297,6 +299,49 @@ print(sorted(array, key=lambda x:x**2)) # Note that we use lambda function here
 
 You can read more about this from [Real Python](https://realpython.com/python-lambda/#key-functions)
 
+### `zip()`
+
+`zip()` is a clean and quick way to iterate through multiple arrays at the same time.
+
+```python
+chars = "abc"
+nums = [1, 2, 3]
+
+for char, num in zip(chars, nums):
+  print(char, num)
+
+# Output:
+# a 1
+# b 2
+# c 3
+```
+
+As you can see, `char` and `num` takes value from `zip(chars, nums)` which iterate through both `chars` and `nums` at once. This is particularly useful when you have to deal with multiple iterable objects. However, be mindful of arrays with different length:
+
+```python
+nums1 = [1, 2, 3]
+nums2 = [4, 5, 6]
+nums3 = [7, 8, 9, 10]
+
+for n1, n2, n3 in zip(nums1, nums2, nums3):
+  print(n1, n2, n3)
+
+# Output
+# 1 4 7
+# 2 5 8
+# 3 6 9
+```
+
+There are two important things to note from the above examples:
+
+- `zip()` takes as many array as you want
+- `zip()` only iterates up to the shortest array
+
+More:
+
+- There is another variant of `zip()` called [zip_longest](#zip_longest) which iterates up to the longest array
+- One of use case of `zip()`: [Iterate through matrix by column](#iterate-through-matrix-by-column)
+
 ## Built-in Libraries
 
 ### collections
@@ -308,12 +353,6 @@ You can read more about this from [Real Python](https://realpython.com/python-la
 #### Counter
 
 #### Queue
-
-### functools
-
-#### reduce
-
-#### cache
 
 ### itertools
 
@@ -328,6 +367,8 @@ You can read more about this from [Real Python](https://realpython.com/python-la
 #### chain
 
 #### zip_longest
+
+Read this first: [`zip()`](#zip)
 
 ### string
 
@@ -372,6 +413,12 @@ print(string.punctuation)
 
 ## Functional Programming
 
+### functools
+
+#### reduce
+
+#### cache
+
 ## Extended Tips and Tricks
 
 ### Python Unpacking with `*`
@@ -402,6 +449,8 @@ print(first, mid, rest)
 # Output
 # SyntaxError: two starred expressions in assignment
 ```
+
+### Iterate through matrix by column
 
 ### Conditional Comprehensions
 
@@ -446,9 +495,6 @@ for i in range(3): print(i); print("--")
 However, as you can imagine, this can be hard to read if you overuse it. So please use it with care. I tend to only use it for variable initilization.
 
 To Add: 
-- lambda
-  - key sort
-- key min, max
 - zip
 - one-line if
 - for else
