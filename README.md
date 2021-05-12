@@ -279,7 +279,7 @@ Find longest string in array:
 
 ```python
 array = ["a", "ab", "abc"]
-print(max(array, key=len)) 
+print(max(array, key=len)) # Note that len() itself is a function
 
 # Output:
 # "abc"
@@ -289,7 +289,7 @@ Sort array by squared value, e.g. `(-2)**2 = 4`
 
 ```python
 array = [-2, 0, 1]
-print(sorted(array, key=lambda x:x**2))
+print(sorted(array, key=lambda x:x**2)) # Note that we use lambda function here
 
 # Output:
 # [0, 1, -2]
