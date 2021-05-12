@@ -21,7 +21,8 @@ Please enjoy.
   - [Quick Initilization](#quick-initilization)
   - [List Comprehension](#list-comprehension)
   - [Dictionary and Set Comprehension](#dictionary-and-set-comprehension)
-  - [Multiple Statements on 1 line](#multiple-statements-on-1-line)
+  - [Lambda Function](#lambda-function)
+  - [Key Functions](#key-functions)
 - [Built-in Libraries](#built-in-libraries)
   - [collections](#collections)
     - [defaultdict](#defaultdict)
@@ -42,9 +43,11 @@ Please enjoy.
   - [random](#random)
   - [heapq](#heapq)
   - [bisect](#bisect)
+- [Functional Programming](#functional-programming)
 - [Extended Tips and Tricks](#extended-tips-and-tricks)
   - [Python Unpacking with `*`](#python-unpacking-with-)
   - [Conditional Comprehensions](#conditional-comprehensions)
+  - [Multiple Statements on 1 line](#multiple-statements-on-1-line)
 
 ## Basic Tips and Tricks
 
@@ -246,23 +249,52 @@ print(my_set)
 
 You might ask why bother with Set Comprehension when we could do this: `set(nums)`. The answer is because of [Conditional Comprehensions](#conditional-comprehensions)
 
-### Multiple Statements on 1 line
+### Lambda Function
 
-Although in Python, we don't use `;` often, it can help with writing multiple lines of code on the same line like this:
+`lambda` function or anonymous function is a different way to write function. The following 2 ways are equivalent:
 
 ```python
-for i in range(3): print(i); print("--")
+def my_func1(x):
+  return x * 2
+
+# is the same as
+my_func2 = lambda x: x * 2
+
+print(my_func1(1))
+print(my_func2(1))
 
 # Output:
-# 0
-# --
-# 1
-# --
 # 2
-# --
+# 2
 ```
 
-However, as you can imagine, this can be hard to read if you overuse it. So please use it with care. I tend to only use it for variable initilization.
+`lambda` function are used a lot in [Key Functions](#key-functions) like `min()`, `max()`, `sort()` and [Functional Programming](#functional-programming) like `map()`, `filter()`, `reduce()`
+
+### Key Functions
+
+Key functions are functions that take parameter `key` as input. `key` receives a function that can be a `lambda`. Some key functions that appear often are `min()`, `max()`, `sort()`, `sorted()`. Here are some examples:
+
+Find longest string in array:
+
+```python
+array = ["a", "ab", "abc"]
+print(max(array, key=len)) 
+
+# Output:
+# "abc"
+```
+
+Sort array by squared value, e.g. `(-2)**2 = 4`
+
+```python
+array = [-2, 0, 1]
+print(sorted(array, key=lambda x:x**2))
+
+# Output:
+# [0, 1, -2]
+```
+
+You can read more about this from [Real Python](https://realpython.com/python-lambda/#key-functions)
 
 ## Built-in Libraries
 
@@ -337,6 +369,8 @@ print(string.punctuation)
 
 ### bisect
 
+## Functional Programming
+
 ## Extended Tips and Tricks
 
 ### Python Unpacking with `*`
@@ -391,6 +425,24 @@ print(nums)
 # Output:
 # [0, 1, 0, 3, 0, 5, 0, 7, 0, 9]
 ```
+
+### Multiple Statements on 1 line
+
+Although in Python, we don't use `;` often, it can help with writing multiple lines of code on the same line like this:
+
+```python
+for i in range(3): print(i); print("--")
+
+# Output:
+# 0
+# --
+# 1
+# --
+# 2
+# --
+```
+
+However, as you can imagine, this can be hard to read if you overuse it. So please use it with care. I tend to only use it for variable initilization.
 
 To Add: 
 - lambda
