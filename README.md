@@ -152,7 +152,7 @@ print(my_list)
 # [0, 0, 0, 0, 0]
 ```
 
-However, please **NEVER** do as follows:
+However, **NEVER** do as follows:
 
 ```python
 my_list = [[0] * 5] * 2   # <--- DO NOT DO THIS. This is shallow copy
@@ -494,8 +494,8 @@ for i in range(3): print(i); print("--")
 
 However, as you can imagine, this can be hard to read if you overuse it. So please use it with care. I tend to only use it for variable initilization.
 
-To Add: 
-- zip
+To Add:
+
 - one-line if
 - for else
 - while else
@@ -503,11 +503,6 @@ To Add:
 - f-string
 - *args, **kwargs
 - Counter, | &
-- functools
-  - lambda
-  - map
-  - filter
-  - reduce
 - string slicing
 - == vs is
 - string, tuple comparison
