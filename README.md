@@ -244,22 +244,21 @@ print(my_set)
 # {1, 2, 3, 4}
 ```
 
-You might ask why bother with Set Comprehension when we could do this: `print(set(nums))`. The answer is because of [Conditional Comprehensions](#conditional-comprehensions)
+You might ask why bother with Set Comprehension when we could do this: `set(nums)`. The answer is because of [Conditional Comprehensions](#conditional-comprehensions)
 
 ### Multiple Statements on 1 line
 
 Although in Python, we don't use `;` often, it can help with writing multiple lines of code on the same line like this:
 
 ```python
-a = 3; b = 10; c = "--"
-for i in range(a): print(i * b); print(c)
+for i in range(3): print(i); print("--")
 
 # Output:
 # 0
 # --
-# 10
+# 1
 # --
-# 20
+# 2
 # --
 ```
 
@@ -410,6 +409,12 @@ To Add:
   - map
   - filter
   - reduce
+- string slicing
+- == vs is
+- string, tuple comparison
+- immutable vs mutable
+- ord vs chr
+- tuple: 1,2,
 - class
 - Generator
 - Iterator
@@ -419,3 +424,4 @@ To Add:
 - https://github.com/chiphuyen/python-is-cool
 - https://book.pythontips.com/en/latest/enumerate.html
 - https://github.com/alexghergh/python-tricks
+- https://towardsdatascience.com/100-helpful-python-tips-you-can-learn-before-finishing-your-morning-coffee-eb9c39e68958
