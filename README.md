@@ -254,10 +254,11 @@ You might ask why bother with Set Comprehension when we could do this: `set(nums
 `lambda` function or anonymous function is a different way to write function. The following 2 ways are equivalent:
 
 ```python
+# Normal function
 def my_func1(x):
   return x * 2
 
-# is the same as
+# Lambda function
 my_func2 = lambda x: x * 2
 
 print(my_func1(1))
