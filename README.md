@@ -36,7 +36,7 @@ Please enjoy.
     - [takewhile](#takewhile)
     - [groupby](#groupby)
     - [chain](#chain)
-    - [zip_longest](#zip_longest)
+    - [zip\_longest](#zip_longest)
   - [string](#string)
   - [random](#random)
   - [heapq](#heapq)
@@ -55,7 +55,7 @@ Please enjoy.
 
 ### Swap 2 variables
 
-In some other languages, when we want to swap 2 variables, we tend to use `temp` to store the value. However, in Python, there is a cleaner way to do this:
+In other languages, when we want to swap 2 variables, we tend to use `temp` to store the value. However, in Python, there is a cleaner way to do this:
 
 ```python
 a = 10
@@ -179,27 +179,27 @@ nums = [i for i in range(1, 5)]
 print(nums)
 
 # Output:
-# [1,2,3,4]
+# [1, 2, 3, 4]
 ```
 
 2 `for` loops. 
 
 ```python
-nums = [i * j for i in range(1, 5) for j in ["A", "B"]]
+nums = [i * j for i in range(1, 5) for j in range(10, 12)]
 print(nums)
 
 # Output:
 # [10, 11, 20, 22, 30, 33, 40, 44]
 
 # Equivalent to:
-# nums = []
-# for i in range(1, 5):
-#     for j in range(10, 12):
-#         nums.append(i * j)
-# print(matrix)
+nums = []
+for i in range(1, 5):
+    for j in range(10, 12):
+        nums.append(i * j)
+print(nums)
 ```
 
-In the example above, please notice that `for i` is the outer loop and `for j` is the inner loop
+In the example above, notice that `for i` is the outer loop and `for j` is the inner loop
 
 2 **Nested** `for` loops:
 
@@ -211,16 +211,16 @@ print(matrix)
 # [[10, 11], [20, 22], [30, 33], [40, 44]]
 
 # Equivalent to:
-# matrix = []
-# for i in range(1, 5):
-#     row = []
-#     for j in range(10, 12):
-#         row.append(i * j)
-#     matrix.append(row)
-# print(matrix)
+matrix = []
+for i in range(1, 5):
+    row = []
+    for j in range(10, 12):
+        row.append(i * j)
+    matrix.append(row)
+print(matrix)
 ```
 
-In this example above, please pay attention to the order of `for i` and `for j`. Although `for i` is the outer loop, it appears after `for j` in the list comprehension
+In the example above, pay attention to the order of `for i` and `for j`. Although `for i` is the outer loop, it appears after `for j` in the list comprehension
 
 Examples:
 
@@ -249,7 +249,7 @@ print(my_set)
 # {1, 2, 3, 4}
 ```
 
-You might ask why bother with Set Comprehension when we could do this: `set(nums)`. The answer is because of [Conditional Comprehensions](#conditional-comprehensions)
+You might ask why bother with Set Comprehension in this case when we could do this: `set(nums)`. The answer is because of [Conditional Comprehensions](#conditional-comprehensions)
 
 ### `lambda` Function
 
@@ -459,7 +459,7 @@ Conditional Comprehensions allow us to add `if else` statement into list/set/dic
 `if` statement in List Comprehension:
 
 ``` python
-nums = [i for i in range(10) if i % 2]           # <--- if is placed at the end 
+nums = [i for i in range(10) if i % 2]           # <--- "if" is placed at the end 
 print(nums)
 
 # Output:
@@ -469,7 +469,7 @@ print(nums)
 `if else` statement in List Comprehension. Notice that `if else` is placed in the **front**.
 
 ``` python
-nums = [i if i % 2 else 0 for i in range(10)]    # <--- if else are placed in the front
+nums = [i if i % 2 else 0 for i in range(10)]    # <--- "if", "else" are placed in the front
 print(nums)
 
 # Output:
